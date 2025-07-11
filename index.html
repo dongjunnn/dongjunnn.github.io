@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+<head>
+ <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+ <title>Dong Jun</title>
+ <link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+  rel="stylesheet"
+/>
+ <meta http-equiv="pragma" content="no-cache" />
+ <meta name="robots" content="all" />
+ <meta name="MSSmartTagsPreventParsing" content="true" />
+ <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+ <style>
+  body {
+    background-color: #000;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    color: #f0f0f0;
+    padding: 3em 1em;
+  }
+
+  .content {
+    max-width: 720px;
+    margin: auto;
+  }
+
+  a {
+    color: #b3d94b;
+    transition: color 0.3s;
+  }
+
+  h1 {
+    margin: 0 0 0.7em;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  h2 {
+    margin: 2.5em 0 1.2em;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #999;
+    font-weight: 600;
+  }
+
+  p {
+    margin: 0 0 1.2em;
+    line-height: 1.65;
+  }
+
+  /* first paragraph after the heading-links row */
+  .content > p:first-of-type {
+    margin-top: 0.5em;
+  }
+
+  ul {
+    margin: 0 0 1.2em;
+    padding-left: 1.2em;
+    line-height: 1.65;
+  }
+
+  li {
+    margin-bottom: 0.4em;
+  }
+
+  /* Uniform spacing: ensure each section header has a consistent gap to the next element */
+  .content > h2 + * {
+    margin-top: 0;
+  }
+
+  .name-underline {
+    position: relative;
+    cursor: default;
+  }
+
+  .name-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.15em;
+    width: 0;
+    height: 2px;
+    background: #b3d94b;
+    transition: width 0.2s ease-out;
+  }
+
+  .name-underline:hover::after {
+    width: 100%;
+  }
+
+  /* Timeline / Work history */
+  .timeline {
+    margin-top: 1.6em;
+  }
+
+  .timeline-list {
+    display: grid;
+    grid-template-columns: 88px 1fr;
+    gap: 0.35em 1.2em;
+    align-items: start;
+  }
+
+  .timeline-year {
+    color: #7a7a7a;
+    font-variant-numeric: tabular-nums;
+    font-size: 0.95rem;
+    padding-top: 0.12rem;
+  }
+
+  .timeline-item {
+    margin-bottom: 0.35em;
+    min-width: 0;
+  }
+
+  .timeline-company {
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: #f6f6f6;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
+    flex-wrap: wrap;
+    min-width: 0;
+  }
+
+  .timeline-role {
+    letter-spacing: 0.12em;
+    color: #9b9b9b;
+    font-size: 0.82rem;
+    font-weight: 400;
+  }
+
+  .timeline-desc {
+    color: #bcbcbc;
+    font-style: italic;
+    margin-top: 0.08rem;
+  }
+
+  .highlight {
+    background-color: rgba(179, 217, 75, 0.2);
+    padding: 0.2em 0.4em;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 560px) {
+    body {
+      padding: 2.2em 1em;
+    }
+
+    h1 {
+      font-size: 2.1rem;
+    }
+
+    .timeline-list {
+      grid-template-columns: 76px 1fr;
+      column-gap: 0.9em;
+      row-gap: 0.5em;
+    }
+
+    .timeline-company {
+      display: flex;
+      gap: 0.35em;
+    }
+
+    .timeline-role {
+      letter-spacing: 0.08em;
+      font-size: 0.78rem;
+    }
+  }
+ </style>
+</head>
+
+<body>
+<div class="content">
+  <h1>Hey! I'm <span class="name-underline">Dong Jun</span>.</h1>
+  <p>
+    <a href="https://github.com/dongjunnn" target="_blank">GitHub</a> ·
+    <a href="https://www.linkedin.com/in/chandongjun" target="_blank">LinkedIn</a>
+  </p>
+  <p>
+    I am a second-year Computer Science undergraduate at the National University of Singapore.
+    I've previously interned at DSO National Laboratories as a machine learning intern and at Huawei as an NPU kernel algorithm developer. I am an incoming summer intern at BlockTech.
+  </p>
+  <p>
+    I'm interested in software engineering and low-level systems programming, and I'm looking for a full-time
+    internship from <span class="highlight">May 2027 to August 2027</span>.
+  </p>
+
+<h2>What I am working on</h2>
+  <ul>
+    <li>AstroParty – C++/SDL2 multiplayer game with ECS architecture and ENet networking</li>
+    <li>ThreadSanitizer and ABA problem in non-blocking algorithms</li>
+  </ul>
+<h2>Experience</h2>
+  <div class="timeline">
+    <div class="timeline-list">
+      <div class="timeline-year timeline-current">Summer 2026</div>
+      <div class="timeline-item">
+        <div class="timeline-company">BlockTech <span class="timeline-role">Software Engineer Intern</span></div>
+      </div>
+      <div class="timeline-year">Spring 2026</div>
+      <div class="timeline-item">
+        <div class="timeline-company">Huawei <span class="timeline-role">NPU Kernel Algorithm Developer</span></div>
+      </div>
+      <div class="timeline-year">2024 - 2027</div>
+      <div class="timeline-item">
+        <div class="timeline-company">National University of Singapore <span class="timeline-role">B.Comp, Computer Science</span></div>
+      </div>
+      <div class="timeline-year">2024</div>
+      <div class="timeline-item">
+        <div class="timeline-company">DSO National Laboratories <span class="timeline-role">Machine Learning Intern</span></div>
+      </div>
+    </div>
+  </div>
+
+<h2>PGP Public Key</h2>
+  <p style="margin-bottom: 0;">Fingerprint: <code>ABAE EF59 CBC9 329F 7B03  D4A7 472C 1D1F 6694 C411</code></p>
+  <p>Download: <a href="/pgp/">dongjun-pgp.asc</a></p>
+</div>
+</html>

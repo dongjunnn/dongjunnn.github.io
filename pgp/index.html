@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+<head>
+ <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+ <title>PGP Key - Dong Jun</title>
+ <link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+  rel="stylesheet"
+/>
+ <meta http-equiv="pragma" content="no-cache" />
+ <meta name="robots" content="all" />
+ <meta name="MSSmartTagsPreventParsing" content="true" />
+ <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+ <style>
+  body {
+    background-color: #000;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    color: #f0f0f0;
+    padding: 3em 1em;
+  }
+
+  .content {
+    max-width: 720px;
+    margin: auto;
+  }
+
+  a {
+    color: #b3d94b;
+    transition: color 0.3s;
+  }
+
+  h1 {
+    margin: 0 0 0.7em;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  h2 {
+    margin: 2.5em 0 1.2em;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #999;
+    font-weight: 600;
+  }
+
+  p {
+    margin: 0 0 1.2em;
+    line-height: 1.65;
+  }
+
+  /* first paragraph after the heading-links row */
+  .content > p:first-of-type {
+    margin-top: 0.5em;
+  }
+
+  .code-container {
+    position: relative;
+    margin-top: 1em;
+  }
+
+  pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background: #111;
+    padding: 1em;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-family: "Inter", monospace;
+    overflow-x: auto;
+  }
+
+  .copy-btn {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    background: #1a1a1a;
+    color: #b3d94b;
+    border: 1px solid #b3d94b;
+    padding: 0.2em 0.6em;
+    font-family: "Inter", monospace;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.15s, background 0.15s;
+  }
+
+  .copy-btn:hover {
+    opacity: 1;
+    background: #222;
+  }
+
+  @media (max-width: 560px) {
+    body {
+      padding: 2.2em 0.9em;
+      font-size: 15px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      line-height: 1.25;
+    }
+
+    p {
+      line-height: 1.7;
+    }
+
+    code {
+      word-break: break-word;
+    }
+
+    pre {
+      font-size: 0.76rem;
+      line-height: 1.5;
+      padding: 3.2em 0.9em 0.9em;
+    }
+
+    .copy-btn {
+      top: 0.55em;
+      right: 0.55em;
+      padding: 0.28em 0.62em;
+      font-size: 0.72rem;
+    }
+  }
+ </style>
+</head>
+
+<body>
+<div class="content">
+  <h1>PGP Public Key</h1>
+
+  <p><a href="/">&larr; Back to home</a></p>
+
+  <p>Fingerprint: <code>ABAE EF59 CBC9 329F 7B03  D4A7 472C 1D1F 6694 C411</code></p>
+
+  <p>Download: <a href="keys/dongjun-pgp.asc">dongjun-pgp.asc</a></p>
+
+  <h2>ASCII-armored key</h2>
+
+  <div class="code-container">
+    <button id="copy-btn" class="copy-btn">Copy</button>
+    <pre id="pgp-key">
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mDMEaSxhdxYJKwYBBAHaRw8BAQdA60jYmJ4zu5jU8kNtl1vJ1MWi43Ak8A4HhLOt
+j3AUPs20CERvbmcgSnVuiJkEExYKAEEWIQSrru9Zy8kyn3sD1KdHLB0fZpTEEQUC
+aSxhdwIbAwUJAeEzgAULCQgHAgIiAgYVCgkICwIEFgIDAQIeBwIXgAAKCRBHLB0f
+ZpTEEXIVAQCI0Nqk+fMlP1APnCWCyriFxt1lCoc4b2lO90NK8XOzPwEA2p7k4S1U
+R9/wN8qPYRty5Wpokg3bItlCtQk+g8dGhwW4OARpLGF3EgorBgEEAZdVAQUBAQdA
+mUenOMwBZSgs0V0me0bfQazRPqA+lFLh44YkNSYx3WEDAQgHiH4EGBYKACYWIQSr
+ru9Zy8kyn3sD1KdHLB0fZpTEEQUCaSxhdwIbDAUJAeEzgAAKCRBHLB0fZpTEERKA
+AQCnB9Afjnv4l3SdlkBFtrYpuUs5/4Tjl4zaGsi01Wi5mgEAz+KZZXVkuMmZMZyH
+Xg2MIR/ZewKgqwtVOoP4qyM7igY=
+=Cg3P
+-----END PGP PUBLIC KEY BLOCK-----
+    </pre>
+  </div>
+</div>
+
+<script>
+document.getElementById("copy-btn").addEventListener("click", () => {
+  const text = document.getElementById("pgp-key").innerText.trim();
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.getElementById("copy-btn");
+    const oldText = btn.innerText;
+    btn.innerText = "Copied!";
+    setTimeout(() => {
+      btn.innerText = oldText;
+    }, 1400);
+  });
+});
+</script>
+
+</body>
+</html>
